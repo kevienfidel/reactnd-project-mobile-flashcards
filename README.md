@@ -12,8 +12,10 @@ Fork this to your repo and clone.
 
 ### Installing
 
-Create React Native App does not currently work well with NPM v5, due to bugs in NPM. While there should be no issues with NPM v3 or v4, we'll be using yarn from here on out just to be safe.
-Run `yarn install` to install dependency. YARN has been used since Create React Native App doesn't work well with NPM v5 due to bugs in NPM. Though there's no issues with NPM v3 or v4, it was preferred using YARN just to be safe.
+Create React Native App does not currently work well with NPM v5, due to bugs in NPM.
+YARN has been used since Create React Native App doesn't work well with NPM v5 due to bugs in NPM. 
+Though there's no issues with NPM v3 or v4, it was preferred using YARN just to be safe.
+Run `yarn install` to install dependency.
 Once the dependency installation has been done, run `yarn start`.
 
 
