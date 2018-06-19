@@ -16,6 +16,16 @@ class Quiz extends Component{
     isQuizCompleted: false
   }
 
+  resetQuiz = () => {
+    this.flipCard()
+    this.setState(() => ({
+      isAnswerViewed: false,
+      index: 0,
+      score: 0,
+      isQuizCompleted: false
+    }))
+  }
+
   handleQuizCompleted = () => {
     const { dispatch, deckId } = this.props
     dispatch(handleQuizCompleted({id: deckId}))
@@ -93,7 +103,7 @@ class Quiz extends Component{
   }
 
   render(){
-    const { deckId, decks, hasCards, totalItems } = this.props
+    const { deckId, decks, hasCards, totalItems, navigation } = this.props
     const { isAnswerViewed, index, isQuizCompleted, score } = this.state
     const frontAnimatedStyle = {
       transform: [
@@ -109,7 +119,10 @@ class Quiz extends Component{
     if (isQuizCompleted){
       const percentage = (score/totalItems)*100
       return(
-        <Result score={parseInt(percentage, 10)}/>
+        <Result navigation={navigation}
+                resetQuiz={() => this.resetQuiz()}
+                deck={{id: deckId, title: decks[deckId].title}}
+                score={parseInt(percentage, 10)}/>
       )
     }else{
       return (

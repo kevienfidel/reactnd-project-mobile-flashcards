@@ -56,13 +56,13 @@ const RootStack = createStackNavigator({
   },
   Quiz: {
     screen: Quiz,
-    navigationOptions: {
+    navigationOptions: ({ navigation }) => ({
       headerTintColor: 'white',
       headerStyle: {
         backgroundColor: '#47A6FF'
       },
       title: 'Quiz'
-    }
+    })
   },
   AddCard: {
     screen: AddCard,

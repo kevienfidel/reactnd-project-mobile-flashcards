@@ -273,5 +273,21 @@ export const styles = StyleSheet.create({
       color:'white',
       fontSize:20
     },
-
+    resultBtnContainer: {
+      flex:1,
+      justifyContent:'flex-end',
+      marginBottom:75,
+      marginTop:'25%'
+    },
+    resultBtn: {
+      alignItems:'center',
+      padding: 10,
+      borderRadius:4,
+      width: 250,
+      marginTop:'0.5%'
+     },
+    resultBtnText: {
+      color:'white',
+      fontSize:20
+    },
 })
